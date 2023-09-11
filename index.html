@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/style.css">
+    <script src="JS/jogo.js"></script>
+    <link rel="icon" type="image/x-icon" href="IMG/estrela.png">
+    <title>Jogo da Memória</title>
+</head>
+
+<body>
+
+    <main>
+        <img src="IMG/leao.png" alt="leao">
+        <h2>Jogo da Memória</h2>
+        <div class="input-container">
+            <input type="text" placeholder="Digite o seu nome" id="namePlayer1">
+            <input type="text" placeholder="Digite o do jogador 2" id="namePlayer2">
+        </div>
+        <button id="btn1Player" onclick="selectPlayerMode(1)">1 Player</button>
+        <button id="btn2Players" onclick="selectPlayerMode(2)">2 Players</button><br>
+        <input type="submit" id="btn" value="Play" onclick="validar()">
+    </main>
+</body>
+
+</html>

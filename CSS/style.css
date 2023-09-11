@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    background: linear-gradient(90deg, pink, white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#btn:hover, #btn2Players:hover, #btn1Player:hover {
+    color: white;
+    transition: 0.5s;
+    background: linear-gradient(90deg, rgb(240, 76, 103), pink);
+}
+
+img {
+    width: 30%;
+}
+
+main {
+    top: 30%;
+    position: absolute;
+    text-align: center;
+    align-items: center;
+}
+
+#btn, #btn1Player, #btn2Players {
+    margin-top: 1%;
+    width: 15%;
+    padding: 6px;
+    font-size: 12px;
+    border-radius: 10px;
+    background-color: pink;
+    border: none;
+    color: black;
+    transition: 0.5s;
+}
+
+input {
+    width: 30%;
+    padding: 7px;
+    border-radius: 10px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 12px;
+    text-align: center;
+    resize: none none;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#namePlayer2 {
+    margin-top: 10px; 
+    display: none;
+}
+
+/* ------ mobile extra fino (galaxy z fold)------*/
+@media screen and (min-width: 270px) and (max-width: 399px) {
+    #btn {
+        width: 40%;
+    }
+
+    input {
+        width: 50%;
+        font-size: 8px;
+    }
+
+    img {
+        width: 50%;
+    }
+}
+
+/* ------ mobile ------*/
+@media screen and (min-width: 400px) and (max-width: 767px) {
+    #btn {
+        width: 25%;
+    }
+
+    input {
+        width: 50%;
+        font-size: 12px;
+    }
+}
+
+/* ------- tablet e desktop pequeno------ */
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+    input {
+        width: 30%;
+    }
+}
+
+/* ------- desktop grande ------ */
+@media screen and (min-width: 1225px) {
+    input {
+        width: 17%;
+    }
+
+    #btn {
+        width: 8%;
+    }
+}

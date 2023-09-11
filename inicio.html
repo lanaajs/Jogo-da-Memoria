@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="IMG/estrela.png">
+    <title>Jogo da Memória</title>
+
+    <style>
+        body {
+            background-image: url('IMG/inicial.png');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .carregando {
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            display: block;
+            left: 47.4%;
+            top: 50%;
+            position: absolute;
+            text-align: center;
+            align-items: center;
+            border: 8px solid rgb(21, 58, 221);
+            border-top: 8px solid transparent;
+            border-radius: 50%;
+
+            animation: loading 1s linear infinite;
+        }
+
+        @keyframes loading {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <span class="carregando"></span>
+</body>
+
+</html>
+
+<script>
+
+    setTimeout(() => {
+        window.location.href = "jogoo.html"
+    }, 5000);
+
+</script>

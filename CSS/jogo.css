@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(rgb(0,0,0,0.2000),rgb(0,0,0,0.2000)), url('../IMG/tela\ jogo.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.carta {
+    background-color: #cc9999;
+    border: thick solid rgba(249, 226, 122, 0.95);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    border-radius: 5px;
+}
+
+/*cronometro*/
+.max-width {
+    max-width: 500px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 10%;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    margin-top: 20px;
+    color: #cc9999;
+}
+
+.jogo {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5%;
+}
+
+#placar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    color: #cc9999 ;
+}
+
+
+/* ------ mobile pequeno ------*/
+@media screen and (min-width: 270px) and (max-width: 501px) {
+    body {
+        display: block;
+
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .cartas {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        gap: 10px;
+    }
+
+    .jogo {
+        margin-right: 1%;
+    }
+
+    .total {
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        margin-top: 8%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .crono {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    .cronototal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vh;
+    }
+
+    .cronn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        background-color: rgba(249, 226, 122, 0.95);
+        border-radius: 10px;
+
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 10px;
+    }
+
+    .carta {
+        width: 140px;
+        height: 200px;
+        border: thick solid rgba(249, 226, 122, 0.95);
+    }
+
+    .carta img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .carta .verso {
+        transform: rotateY(180deg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carta.virada {
+        transform: rotateY(180deg);
+    }
+
+    #botao_restart, #botao_sair{
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+        background-color: #cc9999;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+    }
+
+
+
+
+
+}
+
+/* ------ mobile grande------*/
+@media screen and (min-width: 500px) and (max-width: 767px) {
+
+    body {
+        display: block;
+
+    }
+
+    h1 {
+        font-size: 35px;
+    }
+
+    .cartas {
+        display: grid;
+        grid-template-columns: repeat(4, 130px);
+        gap: 6px;
+    }
+
+    .jogo {
+        margin-right: 1%;
+    }
+
+    .total {
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        margin-top: 1%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .crono {
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+        width: 50%;
+        margin-top: 1rem;
+    }
+
+    .cronototal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 90vh;
+    }
+
+    .cronn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        background-color: rgba(249, 226, 122, 0.95);
+        border-radius: 10px;
+
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .carta {
+        width: 130px;
+        height: 150px;
+        border: thick solid rgba(249, 226, 122, 0.95);
+    }
+
+    .carta img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .carta .verso {
+        transform: rotateY(180deg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carta.virada {
+        transform: rotateY(180deg);
+    }
+
+    #botao_restart, #botao_sair {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+        background-color: #cc9999;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+    }
+
+
+
+
+}
+
+/* ------- tablet e desktop pequeno------ */
+@media screen and (min-width: 768px) and (max-width: 1224px) {
+
+    h1 {
+        font-size: 25px;
+    }
+
+    .cartas {
+        display: grid;
+        grid-template-columns: repeat(4, 130px);
+        gap: 6px;
+    }
+
+    .total {
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        margin-top: 8%;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .crono {
+        margin-right: 1%;
+        margin-left: 6%;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .cronn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        background-color: rgba(249, 226, 122, 0.95);
+        border-radius: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .carta {
+        width: 120px;
+        height: 140px;
+        border: thick solid rgba(249, 226, 122, 0.95);
+    }
+
+    .carta img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .carta .verso {
+        transform: rotateY(180deg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carta.virada {
+        transform: rotateY(180deg);
+    }
+
+    #botao_restart, #botao_sair {
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 12px;
+        background-color: #cc9999;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+    }
+
+}
+
+/* ------- desktop grande ------ */
+@media screen and (min-width: 1225px) {
+
+    /*cronometro*/
+    .max-width {
+        max-width: 500px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        margin-top: 10%;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: 'Press Start 2P', cursive;
+        margin-top: 20px;
+        color: #cc9999;
+    }
+
+
+    /* jogo */
+    .jogo {
+        text-align: center;
+    }
+
+    .cartas {
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        gap: 20px;
+    }
+
+
+    .total {
+        width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px;
+        margin-right: 20px;
+        padding-top: 0px;
+        padding-bottom: 20px;
+        margin-top: 2%;
+    }
+
+    .crono {
+        margin-right: 10%;
+        margin-left: 5%;
+        background-color: rgba(255, 255, 255, 0.95);
+        padding: 15px;
+        border-radius: 10px;
+    }
+
+    .cronn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 200px;
+        background-color: rgba(249, 226, 122, 0.95);
+        border-radius: 10px;
+    }
+
+    .buttons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        gap: 5px;
+    }
+
+    .carta {
+        width: 120px;
+        height: 140px;
+    }
+
+    .carta img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+    }
+
+    .carta .verso {
+        transform: rotateY(180deg);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .carta.virada {
+        transform: rotateY(180deg);
+    }
+
+    #botao_restart, #botao_sair{
+        margin-top: 20px;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #cc9999;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        font-family: 'Press Start 2P', cursive;
+        border-radius: 10px;
+    }
+}
