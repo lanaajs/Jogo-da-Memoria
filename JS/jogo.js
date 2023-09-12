@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (cartas_iguais.length === array_cartas.length) {
       // Verifica o vencedor quando o jogo termina.
-      exibirAlert(`Parabéns, ${nomeJogador1}!\n Você venceu o jogo!`);
+      exibirAlert(`Parabéns, ${nomeJogador2}!\n Você venceu o jogo!`);
     } else {
       // Se as cartas não forem iguais, vira-as de volta.
       carta1.classList.remove("virada"); // Remove a classe "virada" da primeira carta virada para ocultar sua face virada.
