@@ -167,7 +167,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (cartas_iguais.length === array_cartas.length) {
       // Verifica o vencedor quando o jogo termina.
-      exibirAlert(`Parabéns, ${nomeJogador2}!\n Você venceu o jogo!`);
+      exibirAlert(
+        `Parabéns, ${nomeJogador1}! Você venceu o jogo! Clique em "Fechar" para reiniciar.`
+      );
     } else {
       // Se as cartas não forem iguais, vira-as de volta.
       carta1.classList.remove("virada"); // Remove a classe "virada" da primeira carta virada para ocultar sua face virada.
@@ -286,23 +288,21 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // Função para verificar o vencedor
+  // Função "verificarVencedor" para verificar o vencedor do jogo.
   function verificarVencedor() {
     let vencedor;
     if (pontosJogador1 > pontosJogador2) {
       vencedor = nomeJogador1;
-      exibirAlert(`Parabéns, ${vencedor}!\n Você venceu o jogo!`);
-      vitoria = true;
     } else if (pontosJogador2 > pontosJogador1) {
       vencedor = nomeJogador2;
-      exibirAlert(`Parabéns, ${vencedor}!\n Você venceu o jogo!`);
-      vitoria = true;
     } else {
-      exibirAlert("Jogo Empatado");
+      exibirAlert(`Jogo empatado! Clique em "Fechar" para reiniciar.`);
     }
 
-    // Após o clique em "Fechar", chama a função de reinício.
-    restart();
+    // Exibe um alerta com o vencedor e aguarda o clique no botão "Ok".
+    exibirAlert(
+      `Parabéns, ${vencedor}! Você venceu o jogo! Clique em "Fechar" para reiniciar.`
+    );
   }
 
   // Função para exibir o alert personalizado
