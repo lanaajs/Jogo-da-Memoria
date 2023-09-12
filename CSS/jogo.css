@@ -468,29 +468,5 @@ h1 {
     font-family: "Press Start 2P", cursive;
     border-radius: 10px;
   }
-
-  .hidden {
-    display: none;
-  }
-
-  #custom-alert {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-  }
-
-  #custom-alert button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
   
 }
