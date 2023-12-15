@@ -1,5 +1,5 @@
 # Jogo da Memória
-Jogo da memória feito com HTML, CSS e JavaScript.<br />
+Jogo da memória feito com HTML, CSS e JavaScript.<br /><br />
 Jogo da memória temático, usando o desenho animado, Steven Universo. Na série animada, trata da história do amadurecimento de um garoto, Steven, que mora com as Crystal Gems — seres intergalácticos mágicos chamados Garnet, Pérola e Ametista — na cidade fictícia de Beach City.
 ***
 **Criadores:**
